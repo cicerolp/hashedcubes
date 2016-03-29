@@ -1,0 +1,18 @@
+<config>
+	<loader>trips</loader>
+	<name>trips_yellow</name>
+	<path>D:/data/trips_yellow/</path>
+	<leaf>64</leaf>
+	<schema>
+		<spatial>
+			<key>0</key>			
+		</spatial>
+		<spatial>
+			<key>1</key>
+		</spatial>
+		<temporal>
+			<key>day</key>
+			<bin>3600</bin>
+		</temporal>
+	</schema>
+</config>

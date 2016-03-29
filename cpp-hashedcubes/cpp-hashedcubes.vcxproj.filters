@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="WebContent">
+      <UniqueIdentifier>{92ffcec2-b403-4386-b139-6ee7f2658a96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebContent\js">
+      <UniqueIdentifier>{a7e3a695-c540-47d5-b131-76781066bfb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebContent\images">
+      <UniqueIdentifier>{472c174b-4a50-481f-be03-f89e08cf1b2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebContent\css">
+      <UniqueIdentifier>{b5caa1d2-01e6-4bc5-b5d9-8d3af4078baf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebContent\js\d3">
+      <UniqueIdentifier>{9121b041-1ca4-404e-ba48-95578b7e4349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebContent\js\images">
+      <UniqueIdentifier>{5dd07902-75d0-49bf-977e-61065c2d9848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebContent\css\images">
+      <UniqueIdentifier>{651147e4-f2a7-4b16-ac4c-0d42271f0ad9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompiled Headers">
+      <UniqueIdentifier>{79046804-2075-4b79-9cc7-9c6ad96a2433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{259a6108-cbe0-4716-ac12-753ec1e8055a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\server">
+      <UniqueIdentifier>{be00bf3f-12a3-4f2b-a72e-08db0bec4891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\loaders">
+      <UniqueIdentifier>{70697117-8413-4115-b52a-9175e468b213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{1c483bbc-84e2-4e48-984f-f7d3df93d51f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\meerkat">
+      <UniqueIdentifier>{2c79abdb-3125-40ea-9b03-a129da1fdb11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hashing">
+      <UniqueIdentifier>{be39a2a1-f9b0-45ac-a31a-9b81b954b546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\serializers">
+      <UniqueIdentifier>{1d7ece9b-d3ad-4fcd-9d34-6a618e4668f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hashing nodes">
+      <UniqueIdentifier>{8753db56-858d-407f-9532-22999015a333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{12c08b19-879c-4a6c-8ef1-63d0fe40ff80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\SQLiteCpp">
+      <UniqueIdentifier>{95525809-94cd-4a91-af23-5bd917060c7f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Date.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StringUtil.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Response.h">
+      <Filter>Source Files\server</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Server.h">
+      <Filter>Source Files\server</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Query.h">
+      <Filter>Source Files\server</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HashedCube.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HashedCubeInstances.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataLoader.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataGenerator.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Data.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\InMemoryData.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="include\meerkat\meerkat.h">
+      <Filter>include\meerkat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\InMemoryDataDescriptor.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SnapLoader.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\InMemoryDataGenerator.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hashing.h">
+      <Filter>Source Files\hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SpatialDimension.h">
+      <Filter>Source Files\hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TemporalDimension.h">
+      <Filter>Source Files\hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CategoricalDimension.h">
+      <Filter>Source Files\hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CategoricalSerializer.h">
+      <Filter>Source Files\serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TemporalSerializer.h">
+      <Filter>Source Files\serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SpatialSerializer.h">
+      <Filter>Source Files\serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TemporalInterval.h">
+      <Filter>Source Files\hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TemporalNode.h">
+      <Filter>Source Files\hashing nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CategoricalNode.h">
+      <Filter>Source Files\hashing nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ScatterSerializer.h">
+      <Filter>Source Files\serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TripLoader.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Serializer.h">
+      <Filter>Source Files\serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pivot.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TemporalPivot.h">
+      <Filter>Source Files\hashing nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CategoricalPivot.h">
+      <Filter>Source Files\hashing nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Types.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SplomLoader.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Trunc.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FlightsPerformanceLoader.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FlightsLoader.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FlightsDelayLoader.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DMPLoader.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TileNode.h">
+      <Filter>Source Files\hashing nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TilePivot.h">
+      <Filter>Source Files\hashing nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mercator.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="ResidentSetSize.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MySQLSerializer.h">
+      <Filter>Source Files\serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nanocubes.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SQLiteCpp\Assertion.h">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SQLiteCpp\Backup.h">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SQLiteCpp\Column.h">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SQLiteCpp\Database.h">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SQLiteCpp\Exception.h">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SQLiteCpp\SQLiteCpp.h">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SQLiteCpp\Statement.h">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SQLiteCpp\Transaction.h">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SQLiteCpp\sqlite3.h">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SQLData.h">
+      <Filter>Source Files\loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TwitterSQL.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Precompiled Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StringUtil.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Server.cpp">
+      <Filter>Source Files\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Query.cpp">
+      <Filter>Source Files\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HashedCube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HashedCubeInstances.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InMemoryData.cpp">
+      <Filter>Source Files\loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="include\meerkat\meerkat.c">
+      <Filter>include\meerkat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Data.cpp">
+      <Filter>Source Files\loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SnapLoader.cpp">
+      <Filter>Source Files\loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InMemoryDataGenerator.cpp">
+      <Filter>Source Files\loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SpatialDimension.cpp">
+      <Filter>Source Files\hashing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TemporalDimension.cpp">
+      <Filter>Source Files\hashing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CategoricalDimension.cpp">
+      <Filter>Source Files\hashing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CategoricalSerializer.cpp">
+      <Filter>Source Files\serializers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TemporalSerializer.cpp">
+      <Filter>Source Files\serializers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SpatialSerializer.cpp">
+      <Filter>Source Files\serializers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TemporalNode.cpp">
+      <Filter>Source Files\hashing nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CategoricalNode.cpp">
+      <Filter>Source Files\hashing nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ScatterSerializer.cpp">
+      <Filter>Source Files\serializers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TripLoader.cpp">
+      <Filter>Source Files\loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SplomLoader.cpp">
+      <Filter>Source Files\loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FlightsPerformanceLoader.cpp">
+      <Filter>Source Files\loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FlightsDelayLoader.cpp">
+      <Filter>Source Files\loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DMPLoader.cpp">
+      <Filter>Source Files\loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TileNode.cpp">
+      <Filter>Source Files\hashing nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataLoader.cpp">
+      <Filter>Source Files\loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MySQLSerializer.cpp">
+      <Filter>Source Files\serializers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\SQLiteCpp\Backup.cpp">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="include\SQLiteCpp\Column.cpp">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="include\SQLiteCpp\Database.cpp">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="include\SQLiteCpp\Statement.cpp">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="include\SQLiteCpp\Transaction.cpp">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="include\SQLiteCpp\sqlite3.c">
+      <Filter>include\SQLiteCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SQLData.cpp">
+      <Filter>Source Files\loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Types.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WebContent\index.html">
+      <Filter>WebContent</Filter>
+    </None>
+    <None Include="WebContent\js\jquery-1.11.3.min.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\jquery-dateFormat.min.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\jquery-ui-1.11.4.min.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\leaflet.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\linechart.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\loadmap.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\loadui.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\scatterchart.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\view_schemas.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\d3.tip.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\histogram.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\d3\d3-3.5.5.min.js">
+      <Filter>WebContent\js\d3</Filter>
+    </None>
+    <None Include="WebContent\js\d3\LICENSE">
+      <Filter>WebContent\js\d3</Filter>
+    </None>
+    <None Include="WebContent\css\jquery-ui.css">
+      <Filter>WebContent\css</Filter>
+    </None>
+    <None Include="WebContent\css\jquery-ui.min.css">
+      <Filter>WebContent\css</Filter>
+    </None>
+    <None Include="WebContent\css\jquery-ui.structure.css">
+      <Filter>WebContent\css</Filter>
+    </None>
+    <None Include="WebContent\css\jquery-ui.structure.min.css">
+      <Filter>WebContent\css</Filter>
+    </None>
+    <None Include="WebContent\css\jquery-ui.theme.css">
+      <Filter>WebContent\css</Filter>
+    </None>
+    <None Include="WebContent\css\jquery-ui.theme.min.css">
+      <Filter>WebContent\css</Filter>
+    </None>
+    <None Include="WebContent\css\leaflet.css">
+      <Filter>WebContent\css</Filter>
+    </None>
+    <None Include="WebContent\css\styles.css">
+      <Filter>WebContent\css</Filter>
+    </None>
+    <None Include="WebContent\js\leaflet-hashedcubes.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\global.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\sql.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\css\jquery.tablescroll.css">
+      <Filter>WebContent\css</Filter>
+    </None>
+    <None Include="WebContent\js\jquery.tablescroll.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\jquery.jqGrid.min.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\jquery-2.1.4.min.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+    <None Include="WebContent\js\leaflet-src.js">
+      <Filter>WebContent\js</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="WebContent\js\images\layers.png">
+      <Filter>WebContent\js\images</Filter>
+    </Image>
+    <Image Include="WebContent\js\images\layers-2x.png">
+      <Filter>WebContent\js\images</Filter>
+    </Image>
+    <Image Include="WebContent\js\images\marker-icon.png">
+      <Filter>WebContent\js\images</Filter>
+    </Image>
+    <Image Include="WebContent\js\images\marker-icon-2x.png">
+      <Filter>WebContent\js\images</Filter>
+    </Image>
+    <Image Include="WebContent\js\images\marker-shadow.png">
+      <Filter>WebContent\js\images</Filter>
+    </Image>
+    <Image Include="WebContent\images\loading.gif">
+      <Filter>WebContent\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-icons_cd0a0a_256x240.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\layers.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\layers-2x.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\marker-icon.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\marker-icon-2x.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\marker-shadow.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-bg_flat_0_aaaaaa_40x100.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-bg_flat_75_ffffff_40x100.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-bg_glass_55_fbf9ee_1x400.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-bg_glass_65_ffffff_1x400.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-bg_glass_75_dadada_1x400.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-bg_glass_75_e6e6e6_1x400.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-bg_glass_95_fef1ec_1x400.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-icons_2e83ff_256x240.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-icons_222222_256x240.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-icons_454545_256x240.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+    <Image Include="WebContent\css\images\ui-icons_888888_256x240.png">
+      <Filter>WebContent\css\images</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

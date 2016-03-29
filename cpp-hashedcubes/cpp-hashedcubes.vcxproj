@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CA7F9497-B327-4D0D-A9F4-C44B18A254D1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>cpphashedcubes</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)src\;$(SolutionDir)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-DMONGOOSE_ENABLE_THREADS %(AdditionalOptions)</AdditionalOptions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;$(SolutionDir)lib\_x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)src\;$(SolutionDir)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-DMONGOOSE_ENABLE_THREADS %(AdditionalOptions)</AdditionalOptions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;$(SolutionDir)lib\_x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)src\;$(SolutionDir)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-DMONGOOSE_ENABLE_THREADS %(AdditionalOptions)</AdditionalOptions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;$(SolutionDir)lib\_x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)src\;$(SolutionDir)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-DMONGOOSE_ENABLE_THREADS %(AdditionalOptions)</AdditionalOptions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;$(SolutionDir)lib\_x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\meerkat\meerkat.h" />
+    <ClInclude Include="include\SQLiteCpp\Assertion.h" />
+    <ClInclude Include="include\SQLiteCpp\Backup.h" />
+    <ClInclude Include="include\SQLiteCpp\Column.h" />
+    <ClInclude Include="include\SQLiteCpp\Database.h" />
+    <ClInclude Include="include\SQLiteCpp\Exception.h" />
+    <ClInclude Include="include\SQLiteCpp\sqlite3.h" />
+    <ClInclude Include="include\SQLiteCpp\SQLiteCpp.h" />
+    <ClInclude Include="include\SQLiteCpp\Statement.h" />
+    <ClInclude Include="include\SQLiteCpp\Transaction.h" />
+    <ClInclude Include="ResidentSetSize.h" />
+    <ClInclude Include="src\CategoricalDimension.h" />
+    <ClInclude Include="src\CategoricalNode.h" />
+    <ClInclude Include="src\CategoricalPivot.h" />
+    <ClInclude Include="src\CategoricalSerializer.h" />
+    <ClInclude Include="src\Data.h" />
+    <ClInclude Include="src\DataGenerator.h" />
+    <ClInclude Include="src\DataLoader.h" />
+    <ClInclude Include="src\Date.h" />
+    <ClInclude Include="src\DMPLoader.h" />
+    <ClInclude Include="src\FlightsDelayLoader.h" />
+    <ClInclude Include="src\FlightsLoader.h" />
+    <ClInclude Include="src\FlightsPerformanceLoader.h" />
+    <ClInclude Include="src\HashedCube.h" />
+    <ClInclude Include="src\HashedCubeInstances.h" />
+    <ClInclude Include="src\Hashing.h" />
+    <ClInclude Include="src\InMemoryData.h" />
+    <ClInclude Include="src\InMemoryDataDescriptor.h" />
+    <ClInclude Include="src\InMemoryDataGenerator.h" />
+    <ClInclude Include="src\Mercator.h" />
+    <ClInclude Include="src\MySQLSerializer.h" />
+    <ClInclude Include="src\Nanocubes.h" />
+    <ClInclude Include="src\SQLData.h" />
+    <ClInclude Include="src\TileNode.h" />
+    <ClInclude Include="src\TilePivot.h" />
+    <ClInclude Include="src\Trunc.h" />
+    <ClInclude Include="src\Pivot.h" />
+    <ClInclude Include="src\Query.h" />
+    <ClInclude Include="src\Response.h" />
+    <ClInclude Include="src\ScatterSerializer.h" />
+    <ClInclude Include="src\Serializer.h" />
+    <ClInclude Include="src\Server.h" />
+    <ClInclude Include="src\SnapLoader.h" />
+    <ClInclude Include="src\SpatialDimension.h" />
+    <ClInclude Include="src\SpatialSerializer.h" />
+    <ClInclude Include="src\SplomLoader.h" />
+    <ClInclude Include="src\StringUtil.h" />
+    <ClInclude Include="src\TemporalDimension.h" />
+    <ClInclude Include="src\TemporalNode.h" />
+    <ClInclude Include="src\TemporalPivot.h" />
+    <ClInclude Include="src\TemporalInterval.h" />
+    <ClInclude Include="src\TemporalSerializer.h" />
+    <ClInclude Include="src\TripLoader.h" />
+    <ClInclude Include="src\TwitterSQL.h" />
+    <ClInclude Include="src\Types.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="include\meerkat\meerkat.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TurnOffAllWarnings</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TurnOffAllWarnings</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TurnOffAllWarnings</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="include\SQLiteCpp\Backup.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="include\SQLiteCpp\Column.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="include\SQLiteCpp\Database.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="include\SQLiteCpp\sqlite3.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="include\SQLiteCpp\Statement.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="include\SQLiteCpp\Transaction.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\CategoricalDimension.cpp" />
+    <ClCompile Include="src\CategoricalNode.cpp" />
+    <ClCompile Include="src\CategoricalSerializer.cpp" />
+    <ClCompile Include="src\Data.cpp" />
+    <ClCompile Include="src\DataLoader.cpp" />
+    <ClCompile Include="src\DMPLoader.cpp" />
+    <ClCompile Include="src\FlightsDelayLoader.cpp" />
+    <ClCompile Include="src\FlightsPerformanceLoader.cpp" />
+    <ClCompile Include="src\HashedCube.cpp" />
+    <ClCompile Include="src\HashedCubeInstances.cpp" />
+    <ClCompile Include="src\InMemoryData.cpp" />
+    <ClCompile Include="src\InMemoryDataGenerator.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MySQLSerializer.cpp" />
+    <ClCompile Include="src\Query.cpp" />
+    <ClCompile Include="src\ScatterSerializer.cpp" />
+    <ClCompile Include="src\Server.cpp" />
+    <ClCompile Include="src\SnapLoader.cpp" />
+    <ClCompile Include="src\SpatialDimension.cpp" />
+    <ClCompile Include="src\SpatialSerializer.cpp" />
+    <ClCompile Include="src\SplomLoader.cpp" />
+    <ClCompile Include="src\SQLData.cpp" />
+    <ClCompile Include="src\StringUtil.cpp" />
+    <ClCompile Include="src\TemporalDimension.cpp" />
+    <ClCompile Include="src\TemporalNode.cpp" />
+    <ClCompile Include="src\TemporalSerializer.cpp" />
+    <ClCompile Include="src\TileNode.cpp" />
+    <ClCompile Include="src\TripLoader.cpp" />
+    <ClCompile Include="src\Types.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WebContent\css\jquery-ui.css" />
+    <None Include="WebContent\css\jquery-ui.min.css" />
+    <None Include="WebContent\css\jquery-ui.structure.css" />
+    <None Include="WebContent\css\jquery-ui.structure.min.css" />
+    <None Include="WebContent\css\jquery-ui.theme.css" />
+    <None Include="WebContent\css\jquery-ui.theme.min.css" />
+    <None Include="WebContent\css\jquery.tablescroll.css" />
+    <None Include="WebContent\css\leaflet.css" />
+    <None Include="WebContent\css\styles.css" />
+    <None Include="WebContent\index.html" />
+    <None Include="WebContent\js\d3.tip.js" />
+    <None Include="WebContent\js\d3\d3-3.5.5.min.js" />
+    <None Include="WebContent\js\d3\LICENSE" />
+    <None Include="WebContent\js\global.js" />
+    <None Include="WebContent\js\histogram.js" />
+    <None Include="WebContent\js\jquery-1.11.3.min.js" />
+    <None Include="WebContent\js\jquery-2.1.4.min.js" />
+    <None Include="WebContent\js\jquery-dateFormat.min.js" />
+    <None Include="WebContent\js\jquery-ui-1.11.4.min.js" />
+    <None Include="WebContent\js\jquery.jqGrid.min.js" />
+    <None Include="WebContent\js\jquery.tablescroll.js" />
+    <None Include="WebContent\js\leaflet-hashedcubes.js" />
+    <None Include="WebContent\js\leaflet-src.js" />
+    <None Include="WebContent\js\leaflet.js" />
+    <None Include="WebContent\js\linechart.js" />
+    <None Include="WebContent\js\loadmap.js" />
+    <None Include="WebContent\js\loadui.js" />
+    <None Include="WebContent\js\scatterchart.js" />
+    <None Include="WebContent\js\sql.js" />
+    <None Include="WebContent\js\view_schemas.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="WebContent\css\images\layers-2x.png" />
+    <Image Include="WebContent\css\images\layers.png" />
+    <Image Include="WebContent\css\images\marker-icon-2x.png" />
+    <Image Include="WebContent\css\images\marker-icon.png" />
+    <Image Include="WebContent\css\images\marker-shadow.png" />
+    <Image Include="WebContent\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Image Include="WebContent\css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Image Include="WebContent\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Image Include="WebContent\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Image Include="WebContent\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Image Include="WebContent\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Image Include="WebContent\css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Image Include="WebContent\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Image Include="WebContent\css\images\ui-icons_222222_256x240.png" />
+    <Image Include="WebContent\css\images\ui-icons_2e83ff_256x240.png" />
+    <Image Include="WebContent\css\images\ui-icons_454545_256x240.png" />
+    <Image Include="WebContent\css\images\ui-icons_888888_256x240.png" />
+    <Image Include="WebContent\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Image Include="WebContent\images\loading.gif" />
+    <Image Include="WebContent\js\images\layers-2x.png" />
+    <Image Include="WebContent\js\images\layers.png" />
+    <Image Include="WebContent\js\images\marker-icon-2x.png" />
+    <Image Include="WebContent\js\images\marker-icon.png" />
+    <Image Include="WebContent\js\images\marker-shadow.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

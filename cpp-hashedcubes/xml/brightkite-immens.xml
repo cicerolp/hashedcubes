@@ -1,0 +1,23 @@
+<config>
+	<loader>snap</loader>
+	<name>brightkite</name>
+	<path>D:/data/brightkite/</path>
+	<leaf>32</leaf>
+	<schema>
+		<spatial>
+			<key>0</key>			
+		</spatial>
+		<categorical>
+			<key>month_of_year</key>
+			<size>12</size>
+		</categorical>
+		<categorical>
+			<key>hour_of_day</key>
+			<size>24</size>
+		</categorical>
+		<categorical>
+			<key>day_of_month</key>
+			<size>31</size>
+		</categorical>
+	</schema>
+</config>

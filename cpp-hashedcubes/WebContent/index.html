@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="css/ui.jqgrid.css" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/leaflet.css" />
+
+
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+<link rel="stylesheet" href="css/jquery-ui-timepicker-addon.min.css">
+
+<!-- Global Variables -->
+<script src="js/global.js"></script>
+
+<!-- jQuery -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery-ui-1.11.4.min.js"></script>
+
+<script src="js/jquery-ui-timepicker-addon.min.js"></script>
+<script src="js/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
+<script src="js/jquery-ui-sliderAccess.js"></script>
+
+<!-- d3.js -->
+<script src="js/d3/d3-3.5.5.min.js"></script>
+<script src="js/d3.tip.js"></script>
+
+<!-- Leaflet - a JavaScript library for mobile-friendly maps -->
+<script>
+    L_PREFER_CANVAS = true;
+</script>
+<script src="js/leaflet.js"></script>
+
+<!-- jqGrid -->
+<script src="js/i18n/grid.locale-en.js"></script>
+<script type="text/javascript">
+	jQuery.jgrid.no_legacy_api = true;
+</script>
+<script src="js/jquery.jqGrid.min.js"></script>
+    
+<script src="js/view_schemas.js"></script>
+
+<script>
+	var _schema = "brightkite";
+	if (location.hash != '') {
+        _schema = location.hash.substr(1);
+	}
+   	var _view = view_schemas[_schema];
+   	
+   	document.title = "HashedCubes - " + _view.title;
+</script>
+</head>
+
+<body>
+    <div id="right-section"></div>
+	<div id="container">
+		<div id="progressbar"></div>
+		<div id='label'>...</div>
+        <div id="slider"></div>
+        <div id="label-slider">
+            <label for="amount">Heatmap Resolution:</label>
+            <input type="text" id="amount" readonly style="border:0; color:black; font-weight:bold; background: transparent; width: 15px;">
+        </div>
+	
+		<form>
+			<div id="location"></div>
+		</form>
+	
+		<div id="tabs">
+			<ul class="tabs-ul"></ul>
+		</div>
+		
+		<div id="map" ></div>
+		<div id="top-section"></div>		
+ 		<div id="section"></div>
+ 		
+	</div>
+	<div id="loading"></div>
+	
+	<script src="js/loadui.js"></script>
+	<script src="js/histogram.js"></script>
+	<script src="js/linechart.js"></script>
+	<script src="js/scatterchart.js"></script>
+    <script src="js/sql.js"></script>
+	<script src="js/loadmap.js"></script>
+    <script src="js/leaflet-hashedcubes.js"></script>
+	
+</body>
+</html>

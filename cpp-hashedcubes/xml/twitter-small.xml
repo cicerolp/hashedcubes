@@ -1,0 +1,20 @@
+<config>
+	<loader>dmp</loader>
+	<name>twitter-small</name>
+	<path>D:\data\twitter\</path>
+	<leaf>64</leaf>
+	<fraction>100</fraction>
+	<schema>
+		<spatial>
+			<key>0</key>
+		</spatial>
+		<categorical>
+			<key>device</key>
+			<size>5</size>
+		</categorical>
+		<temporal>
+			<key>tseries</key>
+			<bin>14400</bin>
+		</temporal>
+	</schema>
+</config>

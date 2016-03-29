@@ -1,0 +1,24 @@
+<config>
+	<loader>performance</loader>
+	<name>performance</name>
+	<path>D:\data\performance\</path>
+	<leaf>32</leaf>
+	<fraction>100</fraction>
+	<schema>
+		<spatial>
+			<key>0</key>			
+		</spatial>
+		<categorical>
+			<key>dep_delay</key>
+			<size>9</size>
+		</categorical>
+		<categorical>
+			<key>carrier</key>
+			<size>29</size>
+		</categorical>
+		<temporal>
+			<key>tseries</key>
+			<bin>14400</bin>
+		</temporal>
+	</schema>
+</config>

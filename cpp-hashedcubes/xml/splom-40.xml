@@ -1,0 +1,27 @@
+<config>
+	<loader>splom</loader>
+	<name>splom-40</name>
+	<path>D:/data/splom/</path>
+	<schema>
+		<categorical>
+			<key>dim0_40</key>
+			<size>40</size>
+		</categorical>
+		<categorical>
+			<key>dim1_40</key>
+			<size>40</size>
+		</categorical>
+		<categorical>
+			<key>dim2_40</key>
+			<size>40</size>
+		</categorical>
+		<categorical>
+			<key>dim3_40</key>
+			<size>40</size>
+		</categorical>
+		<categorical>
+			<key>dim4_40</key>
+			<size>40</size>
+		</categorical>
+	</schema>
+</config>

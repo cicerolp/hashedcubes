@@ -1,0 +1,220 @@
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  stroke: #ddd;
+}
+
+.x.axis line {
+  stroke: #ddd;
+  stroke-opacity: .5;
+}
+
+.y.axis line {
+  stroke: #ddd;
+}
+
+path.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: .5px;
+}
+
+rect.pane {
+  cursor: move;
+  fill: none;
+  pointer-events: all;
+}
+
+.d3-tip {
+  z-index: 901;
+  line-height: 1;
+  font-weight: bold;
+  padding: 6px;
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
+  border-radius: 4px;
+  
+  font-family: sans-serif;
+  font-size: 13px;
+}
+
+.d3-tip:after {
+  z-index: 901;
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 1);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+.d3-tip.n:after {
+  z-index: 901;
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	position: relative;
+	background: rgba(0.3, 0.3, 0.3, 1);
+	font-family: sans-serif;
+	
+	overflow-y:hidden;
+	overflow-x:hidden;
+}
+
+#container {
+	display: none;
+	
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+
+#right-section {
+	
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+
+	
+	float: right;
+	background: rgba(0, 0, 0, .75);
+}
+
+#loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    background-image: url("/images/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#map {
+	width: 100%;
+	height: 80%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#progressbar {
+	width: 400px;
+	position: absolute;
+	left: 42px;
+	z-index: 900;
+	font-size: 70%;
+	margin-top: 10px;
+	background: rgba(0, 0, 0, .5);
+	text-align: center;
+}
+
+#slider {
+	z-index: 900;
+	position: absolute;
+	left: 192px;
+	margin-top: 45px;
+
+	width: 238px;
+}
+
+#label-slider {
+	z-index: 900;
+	position: absolute;
+	left: 42px;
+	margin-top: 40px;
+
+
+	font: 12px sans-serif;
+	
+	text-align: center;
+	float: left;
+		
+	line-height: 200%;
+	font-weight: bold;
+	color: black;
+	background-color : #d1d1d1;
+}
+
+#label {
+	width: 400px;
+	position: absolute;	
+	left: 32px;	
+	z-index: 900;
+	font: 12px sans-serif;
+	margin-top: 11px;
+	
+	text-align: center;
+	float: left;
+		
+	line-height: 200%;
+	font-weight: bold;
+	color: white;
+}
+
+#tabs {
+	width: 370px;
+	position: absolute;
+	right: 50px;
+	z-index: 900;
+	font-size: 70%;
+	margin-top: 10px;
+	background: rgba(0, 0, 0, .1);
+}
+
+#section {
+	position: absolute;
+	z-index: 900;
+	margin-top: 80vh;
+	width: 100vw;
+	height: 20vh;
+	float: bottom;
+	background: rgba(0, 0, 0, .75);
+}
+
+#top-section {
+	position: absolute;
+	margin-top: 65vh;
+	left: 0vw;
+	width: 100vw;
+	height: 15vh;
+	float: bottom;
+	z-index: 900;
+	background: rgba(0, 0, 0, .35);
+}
+
+.main text {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.leaflet-container {
+	background: rgba(255, 255, 255, .72) !important;
+}
