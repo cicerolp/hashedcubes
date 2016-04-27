@@ -4,6 +4,35 @@
 
 Query::Query(const std::string& url) : Query(util::split(url, "[/]+")) { }
 
+Query::Query(const std::string& instance, const std::string& type) {
+	this->instance = instance;
+	cube = HashedCubeInstances::getInstance().get(instance);
+
+	if (cube != nullptr && cube->spatial() != nullptr) {
+		_tile = std::vector<Tile>(cube->spatial()->key().size());
+		_region = std::vector<TileBounds>(cube->spatial()->key().size());
+	}
+
+	if (type == "tile") {
+		this->type = TILE;
+	}
+	else if (type == "group") {
+		this->type = GROUP;
+	}
+	else if (type == "tseries") {
+		this->type = TSERIES;
+	}
+	else if (type == "scatter") {
+		this->type = SCATTER;
+	}
+	else if (type == "region") {
+		this->type = REGION;
+	}
+	else if (type == "mysql") {
+		this->type = MYSQL;
+	}
+}
+
 Query::Query(const std::vector<std::string>& tokens) : Query(tokens[3], tokens[4]) {
 	for (auto it = tokens.begin() + 5; it != tokens.end(); ++it) {
 		if ((*it) == "tile") {
@@ -32,7 +61,7 @@ Query::Query(const std::vector<std::string>& tokens) : Query(tokens[3], tokens[4
 			int x1 = (int)std::stof(nextToken(it));
 			int y1 = (int)std::stof(nextToken(it));
 
-			emplaceRegion(std::stoul(key), TileBounds({ x0, y0, z }, { x1, y1, z }));
+			emplaceRegion(std::stoul(key), TileBounds(x0, y0, x1, y1, z));
 		}
 		else if ((*it) == "field") {
 			group.emplace(nextToken(it));
@@ -68,29 +97,7 @@ Query::Query(const std::vector<std::string>& tokens) : Query(tokens[3], tokens[4
 	}
 }
 
-Query::Query(const std::string& instance, const std::string& type) {	
-	this->instance = instance;
-	cube = HashedCubeInstances::getInstance().get(instance);
 
-	if (cube != nullptr && cube->spatial() !=  nullptr) {
-		_tile = std::vector<Tile>(cube->spatial()->key().size());
-		_region = std::vector<TileBounds>(cube->spatial()->key().size());
-	}
-
-	if (type == "tile") {
-		this->type = TILE;
-	} else if (type == "group") {		
-		this->type = GROUP;
-	} else if (type == "tseries") {
-		this->type = TSERIES;
-	} else if (type == "scatter") {
-		this->type = SCATTER;
-	} else if (type == "region") {
-		this->type = REGION;
-	} else if (type == "mysql") {
-		this->type = MYSQL;
-	}
-}
 
 std::ostream & operator<<(std::ostream & stream, const Query & query) {
 

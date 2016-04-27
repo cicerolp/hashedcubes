@@ -33,6 +33,9 @@ function setHistogramData(data, entry) {
     
     div = div.append("svg").attr("width", w + margin.left + margin.right).attr("height", h + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")").call(tip);
 
+    
+    var colors = ['#007399', 'Gray']
+
     div.selectAll("rect").data(data).enter().append("rect")
     .attr("x", function(d, i) {
         return i * (w / data.length);
@@ -41,10 +44,25 @@ function setHistogramData(data, entry) {
     }).attr("width", w / data.length - barPadding).attr("height", function(d) {
         return d[1] / maxValue * h;
     }).attr("fill", function(d) {
-        return "rgb(" + Math.floor((1.0 - d[1] / maxValue) * 255) + ","  + Math.floor((d[1] / maxValue) * 154) + ", " + Math.floor((d[1] / maxValue) * 216) + ")";
+        return colors[0];
     })
     .on('mouseover', tip.show)
-    .on('mouseout', tip.hide);
+    .on('mouseout', tip.hide)
+    .on('mouseup', function () { console.log("update"); })
+    .each(function () {
+        var selection = d3.select(this);
+        var state = true;
+        selection.on('mousedown', function () {
+            if (state) {
+                selection.style('fill', colors[1]);
+            } else {
+                selection.style('fill', colors[0]);
+            }
+            state = !state;
+            div.selectAll("rect").each(function (d) { console.log(d3.select(this).style("fill")) });
+
+        });
+     });
     
     div.selectAll("text").data(data).enter().append("text")
     .text(function (d, i) {

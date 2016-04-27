@@ -1,8 +1,8 @@
 <config>
 	<loader>snap</loader>
 	<name>brightkite</name>
-	<path>D:\data\brightkite\</path>
-	<leaf>32</leaf>
+	<path>C:\Users\cicer\OneDrive\PhD\data\brightkite\</path>
+	<leaf>16</leaf>
 	<fraction>100</fraction>
 	<schema>
 		<spatial>

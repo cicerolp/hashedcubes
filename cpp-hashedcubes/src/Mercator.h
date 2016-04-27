@@ -25,9 +25,9 @@ namespace util {
 		return 180.0 / M_PI * atan(0.5 * (exp(n) - exp(-n)));
 	}
 
-	inline bool intersectsTile(const tile_t& tile, const TileBounds& bounds) {
-		return (bounds.tile1.lat0 <= tiley2lat(tile.y, tile.z)) && (bounds.tile1.lon0 >= tilex2lon(tile.x, tile.z))
-			&& (bounds.tile0.lat0 >= tiley2lat(tile.y + 1, tile.z)) && (bounds.tile0.lon0 <= tilex2lon(tile.x + 1, tile.z));
+	inline bool intersectsTile(const tile_t& tile, const TileBounds& bounds) {		
+		return (bounds.lat1 <= tiley2lat(tile.y, tile.z)) && (bounds.lon1 >= tilex2lon(tile.x, tile.z))
+			&& (bounds.lat0 >= tiley2lat(tile.y + 1, tile.z)) && (bounds.lon0 <= tilex2lon(tile.x + 1, tile.z));
 	}
 
 	inline bool intersects(const tile_t& tile0, const Tile& tile1) {

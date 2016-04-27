@@ -137,7 +137,7 @@ namespace util {
 						if (url[7] == "undefined") query.zoom = 1;
 						else query.zoom = std::stoul(url[7]);
 
-						query.emplaceRegion(0, TileBounds({ std::stoi(url[8]), std::stoi(url[9]), query.zoom }, { std::stoi(url[10]), std::stoi(url[11]), query.zoom }));
+						query.emplaceRegion(0, TileBounds(std::stoi(url[8]), std::stoi(url[9]), std::stoi(url[10]), std::stoi(url[11]), query.zoom));
 
 						if (url.size() == 18) {
 							nanocubes_log_fields(nanocubes[url[4]], query, url[13]);

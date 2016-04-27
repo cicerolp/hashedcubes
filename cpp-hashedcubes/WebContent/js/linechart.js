@@ -22,23 +22,27 @@ function loadLineChart(data, entry) {
     var xAxis = d3.svg.axis()
         .scale(x)
         .orient("bottom")
-        .tickSize(-height, 0)
+        .tickSize(-height)
         .tickPadding(6);
 
-    var yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("right")
-        .tickSize(-width)
-        .tickPadding(6);
+   
 
     var area = d3.svg.area()
-        .interpolate("step-before")
+        .interpolate("cardinal")
+        //.interpolate("monotone")
         .x(function (d) { return x(d[0]); })
         .y0(y(0))
         .y1(function (d) { return y(d[1]); });
 
+    var yAxis = d3.svg.axis()
+       .scale(y)
+       .orient("right")
+       .tickSize(-width)
+       .tickPadding(6);
+
     var line = d3.svg.line()
-        .interpolate("step-before")
+        .interpolate("cardinal")
+        //.interpolate("monotone")
         .x(function (d) { return x(d[0]); })
         .y(function (d) { return y(d[1]); });
 
@@ -61,8 +65,8 @@ function loadLineChart(data, entry) {
         .attr("y2", "100%");
 
     gradient.append("stop")
-        .attr("offset", "25%")
-        .attr("stop-color", "DeepSkyBlue")
+        .attr("offset", "50%")
+        .attr("stop-color", "#007399")
         .attr("stop-opacity", 1);
 
     gradient.append("stop")
@@ -83,15 +87,17 @@ function loadLineChart(data, entry) {
         .attr("transform", "translate(" + width + ",0)")
         .attr("font-family", "sans-serif").attr("font-size", "10px").attr("fill", "white").attr("text-anchor", "middle");
 
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .attr("font-family", "sans-serif").attr("font-size", "10px").attr("fill", "white").attr("text-anchor", "middle");;
+
     svg.append("path")
         .attr("class", "area")
         .attr("clip-path", "url(#clip)")
         .style("fill", "url(#gradient)");
 
-    svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .attr("font-family", "sans-serif").attr("font-size", "10px").attr("fill", "white").attr("text-anchor", "middle");;
+    
 
     svg.append("path")
         .attr("class", "line")

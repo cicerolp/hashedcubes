@@ -1,12 +1,15 @@
 <config>
 	<loader>performance</loader>
 	<name>performance</name>
-	<path>D:\data\performance\</path>
+	<path>C:\Users\cicer\OneDrive\PhD\data\performance\</path>
 	<leaf>32</leaf>
 	<fraction>100</fraction>
 	<schema>
 		<spatial>
 			<key>0</key>			
+		</spatial>
+		<spatial>
+			<key>1</key>			
 		</spatial>
 		<categorical>
 			<key>dep_delay</key>

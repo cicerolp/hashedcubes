@@ -46,21 +46,29 @@ void TileNode::queryRegion(const SpatialDimension* hashing, const Query& query, 
 	const ulong d = level % hashing->key().size();
 
 	if (query.evalRegion(d)) {
-		if (_pivot.value().z == query.zoom) {
-			const TileBounds& bounds = query.getRegion(d);
-			if (_pivot.value().x >= bounds.tile0.x && _pivot.value().x <= bounds.tile1.x
-				&& _pivot.value().y >= bounds.tile0.y && _pivot.value().y <= bounds.tile1.y) {
+		/*std::cout << "eval" << std::endl;
+		std::cout << query.getRegion(d).lon0 << std::endl;
+		std::cout << util::tilex2lon(_pivot.value().x, 0)   << std::endl;
+		std::cout << query.getRegion(d).lon1 << std::endl;
+		std::cout << util::tilex2lon(_pivot.value().x + 1, 0) << std::endl;
+		
+		std::cout << query.getRegion(d).lat0 << std::endl;
+		std::cout << util::tiley2lat(_pivot.value().y, 0) << std::endl;
+		std::cout << query.getRegion(d).lat1 << std::endl;
+		std::cout << util::tiley2lat(_pivot.value().y + 1, 0) << std::endl;*/
+		
+		if (util::intersectsTile(_pivot.value(), query.getRegion(d))) {
+			//std::cout << "intersects" << std::endl; 
+			if (d == query.getLastValidRegion() && (last() || _pivot.value().z == query.zoom)) {
 				response.addElement(&_pivot);
+			} else {
+				if (_container[0] != nullptr) _container[0]->queryRegion(hashing, query, response, level + 1);
+				if (_container[1] != nullptr) _container[1]->queryRegion(hashing, query, response, level + 1);
+				if (_container[2] != nullptr) _container[2]->queryRegion(hashing, query, response, level + 1);
+				if (_container[3] != nullptr) _container[3]->queryRegion(hashing, query, response, level + 1);
 			}
-		} else if (last()) {
-			if (util::intersectsTile(_pivot.value(), query.getRegion(d))) {
-				response.addElement(&_pivot);
-			}
-		} else /*if (_pivot.value().z < query.zoom)*/ {
-			if (_container[0] != nullptr) _container[0]->queryRegion(hashing, query, response, level + 1);
-			if (_container[1] != nullptr) _container[1]->queryRegion(hashing, query, response, level + 1);
-			if (_container[2] != nullptr) _container[2]->queryRegion(hashing, query, response, level + 1);
-			if (_container[3] != nullptr) _container[3]->queryRegion(hashing, query, response, level + 1);
+		} else {
+			return;
 		}
 	} else {
 		if (_container[0] != nullptr) _container[0]->queryRegion(hashing, query, response, level + 1);

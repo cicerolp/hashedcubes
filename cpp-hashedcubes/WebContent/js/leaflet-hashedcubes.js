@@ -99,7 +99,7 @@ function pickDrawFuncs() {
 
     var drawfuncs = {
         circle: function draw_circle(context, datum) {
-            var radius = 2.0;
+            var radius = 3.0;
             var midx = (datum.x0 + datum.x1) / 2;
             var midy = (datum.y0 + datum.y1) / 2;
             context.beginPath();

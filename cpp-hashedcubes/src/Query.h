@@ -61,9 +61,13 @@ public:
 	}
 
 	// region
+	inline ulong getLastValidRegion(void) const {
+		return _last_valid_region;
+	}
 	inline void emplaceRegion(ulong key, const TileBounds& region) {
 		if (key < _region.size()) {
 			_region[key] = region;
+			_last_valid_region = key;
 		}
 	}
 	inline bool evalRegion(ulong key) const {
@@ -94,6 +98,7 @@ protected:
 	std::vector<Tile> _tile;
 
 	// region
+	ulong _last_valid_region = 0;
 	std::vector<TileBounds> _region;
 
 	// where

@@ -207,7 +207,7 @@ var view_schemas = {
     },
 
     "trips_green": {
-        PLOTTING: "black",
+        PLOTTING: "white",
         PLOTTING_MODE: "circle",
         PLOTTING_COLOR_SCALE: "ryw",
         PLOTTING_TRANSFORM: "density_scaling",
@@ -246,15 +246,6 @@ var view_schemas = {
 								"07", "08", "09", "10", "11", "12", "13", "14",
 								"15", "16", "17", "18", "19", "20", "21", "22",
 								"23"]
-				    }
-				}, {
-				    type: "time-series",
-				    title: "Timeline",
-				    on_menu: true,
-				    div: "#top-section",
-				    size: 50,
-				    field: {
-				        name: "day",
 				    }
 				},
             ],
@@ -383,7 +374,7 @@ var view_schemas = {
     },
 
     "performance": {
-        PLOTTING: "white",
+        PLOTTING: "black",
         PLOTTING_MODE: "circle",
         PLOTTING_COLOR_SCALE: "bbb",
         PLOTTING_TRANSFORM: "density_scaling",
@@ -400,12 +391,12 @@ var view_schemas = {
         views: [
 				{
 				    type: "histogram",
-				    title: "On Time",
+				    title: "Delay",
 				    on_menu: true,
 				    div: "#section",
 				    size: 25,
 				    field: {
-				        name: "delay",
+				        name: "dep_delay",
 				        values: ["61+min early", "31-60min early",
 								"16-30min early", "6-15min early",
 								"5min early/late", "6-15min late",

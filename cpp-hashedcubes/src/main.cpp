@@ -5,7 +5,6 @@
 #include "Nanocubes.h"
 #include "TwitterSQL.h"
 
-/**/
 Schema loadConfig(std::string fileName) {
 	boost::property_tree::ptree pt;
 	boost::property_tree::read_xml(fileName, pt);
@@ -53,7 +52,7 @@ int main(int argc, char *argv[]) {
 	bool no_server = false;
 	bool nanocube_log = false;
 	
-	ulong server_port = 8002;
+	ulong server_port = 8000;
 
 	std::vector<Schema> args;
 	std::vector<std::string> xml_files;
@@ -175,94 +174,3 @@ int main(int argc, char *argv[]) {
 	
 	return 0;
 }
-/**/
-
-/*
-int main(int argc, char *argv[]) {
-	//if (argc < 2) exit(0);
-	
-	boost::filesystem::path boost_path(R"(C:\Users\cicer\OneDrive\benchmark-2016-03-09\dmp)");
-
-	if (!exists(boost_path) || !is_directory(boost_path)) {
-		std::cout << boost_path << " is a invalid path." << std::endl;
-		return 0;
-	}
-
-	for (auto& x : boost::filesystem::directory_iterator(boost_path)) {
-
-		if (is_directory(x)) continue;
-
-		std::ifstream infile(x.path().string());
-		std::ofstream outfile(x.path().string().substr(0, x.path().string().size() - 3) + "dmp", std::ofstream::out);
-
-		infile.unsetf(std::ios_base::skipws);
-
-		size_t line_count = std::count(std::istreambuf_iterator<char>(infile), std::istreambuf_iterator<char>(), '\n') + 1;
-		infile.seekg(0, infile.beg);
-
-		std::vector<unsigned long> duration;
-
-		for (int l = 0; l < (int)line_count; ++l) {
-			std::string line;
-			std::getline(infile, line);
-
-			if (line == "" || l < 3) continue;
-
-			auto record = util::split(line, ",");
-
-			duration.emplace_back(std::stoi(record[0]));
-		}
-
-
-		double  median, stdev, mean;
-		long long mode, maximum, minimum;
-
-		std::sort(duration.begin(), duration.end());
-		maximum = duration.back();
-		minimum = duration.front();
-
-		if (duration.size() % 2 == 0) {
-			median = (duration[duration.size() / 2] + duration[(duration.size() / 2) - 1]) / 2.0;
-		}
-		else {
-			median = duration[duration.size() / 2];
-		}
-
-		mode = duration[0];
-		ulong max = 0;
-		ulong counter = 1;
-		for (size_t i = 0; i < duration.size() - 1; ++i) {
-			if (duration[i] == duration[i + 1]) {
-				counter++;
-				if (counter > max) {
-					max = counter;
-					mode = duration[i];
-				}
-			}
-			else {
-				counter = 1;
-			}
-		}
-
-		long long sum = std::accumulate(duration.begin(), duration.end(), 0.0);
-		mean = sum / duration.size();
-
-		double curr_mean = mean;
-		std::vector<double> diff(duration.size());
-		std::transform(duration.begin(), duration.end(), diff.begin(), [curr_mean](double x) { return x - curr_mean; });
-		double sq_sum = std::inner_product(diff.begin(), diff.end(), diff.begin(), 0.0);
-		stdev = std::sqrt(sq_sum / duration.size());
-
-		outfile << "\tMedian: " << median  << std::endl;
-		outfile << "\tMode: "   << mode    << std::endl;
-		outfile << "\tMean: "   << mean    << std::endl;
-		outfile << "\tStdev: "  << stdev   << std::endl;
-		outfile << "\tMax: "    << maximum << std::endl;
-		outfile << "\tMin: "    << minimum << std::endl;
-
-		infile.close();
-		outfile.close();
-	}
-	return 0;
-}
-/**/

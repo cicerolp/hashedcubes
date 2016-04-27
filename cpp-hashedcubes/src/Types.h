@@ -31,6 +31,11 @@ struct tile_t {
 	uint64_t y : 20;
 	uint64_t z : 5;
 	uint64_t l : 1;
+
+	friend std::ostream& operator<< (std::ostream& stream, const tile_t& tile) {
+		stream << tile.x << "/" << tile.y << "/" << tile.z;
+		return stream;
+	}
 };
 
 namespace std {
@@ -66,16 +71,18 @@ struct Tile {
 
 struct TileBounds {
 	TileBounds() = default;
-	TileBounds(Tile _tile0, Tile _tile1) : tile0(_tile0), tile1(_tile1) {}
+	TileBounds(ulong _x0, ulong _y0, ulong _x1, ulong _y1, ulong _z);
 	
-	Tile tile0, tile1;
+	int z{ -1 };
+	ulong x0, y0, x1, y1;
+	float lat0, lon0, lat1, lon1;
 
 	inline bool isValid() const {
-		return tile0.isValid();
+		return z != -1;
 	}
 
 	friend std::ostream& operator<< (std::ostream& stream, const TileBounds& tile) {
-		stream << tile.tile0.x << "/" << tile.tile0.y << "/" << tile.tile1.x << "/" << tile.tile1.y;
+		stream << tile.x0 << "/" << tile.y0 << "/" << tile.x1 << "/" << tile.y1;
 		return stream;
 	}
 };
