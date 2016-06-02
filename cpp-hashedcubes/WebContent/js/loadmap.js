@@ -150,7 +150,7 @@ function updateDataRestrictions() {
     		var restriction = entry.field.name + "=";
     		
     		$("#tabs-" + entry.field.name + "-checkboxes" + " :checked").each(function() {
-    			restriction += parseInt($(this).val()) + "|";
+    			restriction += parseInt($(this).val()) + ":";
     	        query_where = true;
     	    });
     		restriction = restriction.substring(0, restriction.length - 1) + "&";

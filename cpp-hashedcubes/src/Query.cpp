@@ -71,7 +71,7 @@ Query::Query(const std::vector<std::string>& tokens) : Query(tokens[3], tokens[4
 			std::vector<std::string> uri = util::split(nextToken(it), std::regex("&"));
 
 			for (auto clause : uri) {
-				std::vector<std::string> literals = util::split(clause, std::regex("=|\\|"));
+				std::vector<std::string> literals = util::split(clause, std::regex("=|:"));
 
 				if ((literals.size() - 1) <= 0) continue;
 
@@ -138,7 +138,7 @@ std::ostream & operator<<(std::ostream & stream, const Query & query) {
 		stream << "/field/" + group;
 	}
 
-	// /where/<category>=<[value]|[value]...|[value]>&<category>=<[value]|[value]...|[value]>
+	// /where/<category>=<[value]:[value]...:[value]>&<category>=<[value]:[value]...:[value]>
 	if (query._where.size() != 0) {
 		std::string where_stream = "/where/";
 
@@ -146,7 +146,7 @@ std::ostream & operator<<(std::ostream & stream, const Query & query) {
 			where_stream += where.first + "=";
 
 			for (size_t i = 0; i < where.second.size(); ++i) {
-				if (where.second[i]) where_stream += std::to_string(i) + "|";
+				if (where.second[i]) where_stream += std::to_string(i) + ":";
 			}
 			where_stream = where_stream.substr(0, where_stream.size() - 1);
 			where_stream += "&";
