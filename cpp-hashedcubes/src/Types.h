@@ -27,8 +27,8 @@ struct tile_t {
 		return (z == other.z && x == other.x && y == other.y);
 	}
 
-	uint64_t x : 20;
-	uint64_t y : 20;
+	uint64_t x : 29;
+	uint64_t y : 29;
 	uint64_t z : 5;
 	uint64_t l : 1;
 
