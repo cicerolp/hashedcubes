@@ -1,0 +1,24 @@
+<config>
+	<loader>snap</loader>
+	<name>brightkite</name>
+	<path>./data/brightkite/</path>
+	<leaf>32</leaf>
+	<fraction>100</fraction>
+	<schema>
+		<spatial>
+			<key>0</key>			
+		</spatial>
+		<categorical>
+			<key>day_of_week</key>
+			<size>7</size>
+		</categorical>
+		<categorical>
+			<key>hour_of_day</key>
+			<size>24</size>
+		</categorical>
+		<temporal>
+			<key>tseries</key>
+			<bin>604800</bin>
+		</temporal>
+	</schema>
+</config>
