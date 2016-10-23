@@ -48,9 +48,6 @@
 
 #include <bitset>
 
-// openmp
-#include <omp.h>
-
 // meerkat
 #include <meerkat/meerkat.h>
 
