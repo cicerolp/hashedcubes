@@ -1,15 +1,17 @@
 project (hashedcubes)
-cmake_minimum_required (VERSION 2.8.11)
+cmake_minimum_required (VERSION 3.0)
 
-set(BOOST_INCLUDEDIR "C:/Boost/include/boost-1_62/")
-set(BOOST_LIBRARYDIR "C:/Boost/lib/")
+if(WIN32)
+   if (MSVC)
+      set(CMAKE_CXX_FLAGS "/EHsc")
+   endif()   
 
-if(MSVC)
-   set(CMAKE_CXX_FLAGS "/EHsc")
+   set(BOOST_LIBRARYDIR "C:/Boost/lib/")
+   set(BOOST_INCLUDEDIR "C:/Boost/include/boost-1_62/")
 endif()
 
 if(UNIX)
-   set(CMAKE_CXX_FLAGS "-std=c++14 ")
+   set(CMAKE_CXX_FLAGS "-std=c++14")
 endif()
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMake")
@@ -18,12 +20,15 @@ include(cotire)
 
 aux_source_directory(. SRC_LIST)
 
+include_directories(AFTER ./)
+include_directories(AFTER src)
 include_directories(AFTER include)
 include_directories(AFTER include/sqlite)
-include_directories(AFTER src)
-include_directories(AFTER ./)
 
-add_executable (${PROJECT_NAME} ${SRC_LIST}
+file(GLOB_RECURSE HEADERS "src/*.h")
+source_group("Header Files" FILES ${HEADERS})
+
+add_executable (${PROJECT_NAME} ${SRC_LIST} ${HEADERS}
    include/sqlite/sqlite3.c
    include/meerkat/meerkat.c   
    include/SQLiteCpp/Backup.cpp
@@ -67,7 +72,7 @@ find_package(Threads REQUIRED)
 set(Boost_USE_MULTITHREAD ON)
 set(Boost_USE_STATIC_LIBS ON)
 
-find_package(Boost 1.62 COMPONENTS system filesystem serialization iostreams REQUIRED)
+find_package(Boost 1.62 COMPONENTS system filesystem serialization iostreams program_options REQUIRED)
 
 include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIR})

@@ -56,13 +56,15 @@
 #include <rapidjson/stringbuffer.h>
 
 // boost
+#include <boost/filesystem.hpp>
+
+#include <boost/program_options.hpp>
+
+#include <boost/iostreams/stream.hpp>
+#include <boost/iostreams/device/mapped_file.hpp>
+
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/xml_parser.hpp>
-
-#include <boost/iostreams/device/mapped_file.hpp>
-#include <boost/iostreams/stream.hpp>
-
-#include <boost/filesystem.hpp>
 
 #include <boost/archive/xml_iarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
