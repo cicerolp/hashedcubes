@@ -7,7 +7,7 @@
 
 Schema loadConfig(std::string fileName) {
 
-   if (!boost::filesystem::exists("myfile.txt")) {
+   if (!boost::filesystem::exists(fileName)) {
       std::cerr << "error: " << fileName << " does not exist." << std::endl;
       std::abort();
    }
@@ -75,12 +75,11 @@ int main(int argc, char* argv[]) {
          ("no-server,s", "disable server")
          ("port,p", po::value<uint32_t>(&server_port)->default_value(server_port), "server port")
 
-         ("telemetry,t", po::value<std::string>(&telemetry_file)->default_value(telemetry_file), "telemetry output file")
+         ("telemetry,t", po::value<std::string>(&telemetry_file), "telemetry output file")
 
          ("xml,x", po::value<std::vector<std::string>>(&input_files)
-          ->default_value(std::vector<std::string>(1, "./xml/brightkite.nds.xml"), "./xml/brightkite.nds.xml")->composing(), "input files")
-         ("log,l", po::value<std::vector<std::string>>(&benchmark_files)
-          ->default_value(std::vector<std::string>(1, "./csv/brightkite.csv"), "./csv/brightkite.csv")->composing(), "benchmark input files");
+          ->default_value(std::vector<std::string>(1, "./xml/brightkite-nanocubes.xml"), "./xml/brightkite-nanocubes.xml")->composing(), "input files")
+         ("log,l", po::value<std::vector<std::string>>(&benchmark_files), "benchmark input files");
 
    po::positional_options_description p;
    p.add("xml", -1);
