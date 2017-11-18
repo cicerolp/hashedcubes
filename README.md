@@ -9,12 +9,19 @@ The underlying concept behind Hashedcubes makes it natural to create links betwe
 Hashedcubes depends on Boost 1.62 or later and CMake 3.0 or later, both on Windows and Linux.
 
 To build and run on Linux:
+
 1- extract csv.7z and data.7z
+
 2- cd build
+
 3- cmake -DCMAKE_BUILD_TYPE=Release ..
+
 4- make
+
 5- cd .. && cp build/hashedcubes .
+
 6- ./hashedcubes
 
-Web interface: [http://localhost:8000]
-To list all command line parameters: ./hashedcubes -h
+__Web interface: [http://localhost:8000]__
+
+__To list all command line parameters: ./hashedcubes -h__
