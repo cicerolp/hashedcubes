@@ -1,7 +1,7 @@
 function loadMap() {
     var layers = {
-         black : 'http://{s}.tiles.mapbox.com/v4/cicerolp.mgdebfa9/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2ljZXJvbHAiLCJhIjoia1IxYmtfMCJ9.3EMmwKCCFN-hmsrQY4_wUQ',
-         white : 'http://{s}.tiles.mapbox.com/v4/cicerolp.pdni2p2n/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2ljZXJvbHAiLCJhIjoia1IxYmtfMCJ9.3EMmwKCCFN-hmsrQY4_wUQ'
+        black: 'https://api.mapbox.com/styles/v1/cicerolp/cjc0c14n3fr6y2qqjwirlsj7e/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2ljZXJvbHAiLCJhIjoia1IxYmtfMCJ9.3EMmwKCCFN-hmsrQY4_wUQ',
+        white: 'https://api.mapbox.com/styles/v1/cicerolp/cjc0c1nafgzqu2sru25nufh5r/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2ljZXJvbHAiLCJhIjoia1IxYmtfMCJ9.3EMmwKCCFN-hmsrQY4_wUQ'
     }
 
     var baseLayer = L.tileLayer(layers[view_schemas[_schema].PLOTTING], {
