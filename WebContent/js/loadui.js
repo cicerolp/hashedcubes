@@ -1,7 +1,7 @@
 function loadMap() {
-    var layers = {
-        black: 'https://api.mapbox.com/styles/v1/calpahins/cjh7nygud63km2sq5zp0pikfw/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiY2FscGFoaW5zIiwiYSI6ImNqaDduaGVtdDBhM28zM21qN2hoOTh1d2IifQ.JyQl2tr6nStL5271bNz7FA',
-        white: 'https://api.mapbox.com/styles/v1/calpahins/cjh7nizdb615e2rk3btgrklul/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiY2FscGFoaW5zIiwiYSI6ImNqaDduaGVtdDBhM28zM21qN2hoOTh1d2IifQ.JyQl2tr6nStL5271bNz7FA'
+    var layers = {        
+        black: 'https://api.mapbox.com/styles/v1/calpahins/cjh7nygud63km2sq5zp0pikfw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2FscGFoaW5zIiwiYSI6ImNqaDduaGVtdDBhM28zM21qN2hoOTh1d2IifQ.JyQl2tr6nStL5271bNz7FA',
+        white: 'https://api.mapbox.com/styles/v1/calpahins/cjh7nizdb615e2rk3btgrklul/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2FscGFoaW5zIiwiYSI6ImNqaDduaGVtdDBhM28zM21qN2hoOTh1d2IifQ.JyQl2tr6nStL5271bNz7FA'
     }
 
     var baseLayer = L.tileLayer(layers[view_schemas[_schema].PLOTTING], {
